@@ -1,0 +1,20 @@
+html
+  head
+    title Toy Kingdom
+    link(rel="stylesheet", href="/css/styles.css")
+  body
+    header
+      h1 Welcome to Toy Kingdom
+      nav
+        ul
+          li: a(href="/") Home
+          li: a(href="#") Toys
+          li: a(href="#") About Us
+    main
+      h2 Home Page Content
+      p Discover the magic of toys at Toy Kingdom.
+        each toy in toys
+          li
+            h3= toy.name
+            p= toy.description
+            p Price: $ #{toy.price}

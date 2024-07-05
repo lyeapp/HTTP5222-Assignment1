@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title Add Toy - Toy Kingdom
+    link(rel="stylesheet", href="/css/styles.css")
+  body
+    header
+      h1 Add New Toy
+      nav
+        ul
+          li: a(href="/") Home
+          li: a(href="/toys") Toys
+          li: a(href="/about") About Us
+    main
+      form(action="/admin/add-toy", method="POST")
+        div
+          label(for="name") Name
+          input(type="text", id="name", name="name", required)
+        div
+          label(for="description") Description
+          input(type="text", id="description", name="description", required)
+        div
+          label(for="price") Price
+          input(type="number", id="price", name="price", required)
+        div
+          button(type="submit") Add Toy

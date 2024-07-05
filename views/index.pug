@@ -1,20 +1,23 @@
+doctype html
 html
   head
-    title Toy Kingdom
-    link(rel="stylesheet", href="/css/styles.css")
+    meta(charset="utf-8")
+    title Home - Toy Kingdom
+    link(rel="stylesheet" href="style.css" type="text/css")
   body
     header
       h1 Welcome to Toy Kingdom
       nav
         ul
           li: a(href="/") Home
-          li: a(href="#") Toys
-          li: a(href="#") About Us
+          li: a(href="/about") About Us
+          li: a(href="/contact") Contact
     main
-      h2 Home Page Content
-      p Discover the magic of toys at Toy Kingdom.
+      h2 Our Toys
+      ul
         each toy in toys
           li
             h3= toy.name
             p= toy.description
             p Price: $ #{toy.price}
+            img(src=toy.imageUrl, alt=toy.name)

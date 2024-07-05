@@ -31,8 +31,6 @@ module.exports = {
   connect,
   getToys,
   getToyById,
-  
-
 
 };
 
